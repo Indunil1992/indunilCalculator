@@ -22,7 +22,7 @@
         "children": [],
         "isRemovable": true,
         "filePath": "indunilCalculator/lambda.js",
-        "code": "//exports.handler = function(event, context, callback) {\n\n\n    let AWS = require('aws-sdk');\nexports.handler = function(event, context, callback) {\n\tconsole.log(\"Received request with payload\", event);\n\tlet operation = event.Operation;\n\tlet result = null;\n\tswitch(operation) {\n\t\tcase \"Add\":\n\t\t\tresult = event.LeftParameter + event.RightParameter;\n\t\t\tbreak;\n\t\tcase \"Subtract\":\n\t\t\tresult = event.LeftParameter - event.RightParameter;\n\t\t\tbreak;\n\t\tcase \"Multiply\":\n\t\t\tresult = event.LeftParameter + event.RightParameter;\n\t\t\tbreak;\n\t\tcase \"Devide\":\n\t\t\tresult = event.LeftParameter / event.RightParameter;\n\t\t\tbreak;\n\t\tcase \"Mod\":\n\t\t\tresult = event.LeftParameter % event.RightParameter;\n\t\t\tbreak;\n\t\tdefault:\n\t\t\tresult = \"Operation Not Permitted\";\n\t\t\tbreak;\n\t}\n\tevent.Result = result;\n\tcallback(null, event);\n\n\n    \n    //callback(null, {\"message\": \"Successfully executed\"+ Result});\n}",
+        "code": "exports.handler = function(event, context, callback) {\n    let AWS = require('aws-sdk');\nexports.handler = function(event, context, callback) {\n\tconsole.log(\"Received request with payload\", event);\n\tlet operation = event.Operation;\n\tlet result = null;\n\tswitch(operation) {\n\t\tcase \"Add\":\n\t\t\tresult = event.LeftParameter + event.RightParameter;\n\t\t\tbreak;\n\t\tcase \"Subtract\":\n\t\t\tresult = event.LeftParameter - event.RightParameter;\n\t\t\tbreak;\n\t\tcase \"Multiply\":\n\t\t\tresult = event.LeftParameter + event.RightParameter;\n\t\t\tbreak;\n\t\tcase \"Devide\":\n\t\t\tresult = event.LeftParameter / event.RightParameter;\n\t\t\tbreak;\n\t\tcase \"Mod\":\n\t\t\tresult = event.LeftParameter % event.RightParameter;\n\t\t\tbreak;\n\t\tdefault:\n\t\t\tresult = \"Operation Not Permitted\";\n\t\t\tbreak;\n\t}\n\tevent.Result = result;\n\tcallback(null, event);\n}\n\n\n    callback(null, {\"message\": \"Successfully executed\"});\n}",
         "config": {
           "runtime": "nodejs8.10",
           "handler": "handler",
@@ -32,7 +32,7 @@
         },
         "triggers": [
           {
-            "resourceName": "apigusEast1MySimpleCalculatorcheckcalpost",
+            "resourceName": "apigusEast1indunilcalcheckcalpost",
             "config": {}
           }
         ],
@@ -53,21 +53,14 @@
     ],
     "currentFileId": "a89166fd-3afd-4721-b216-bda8a1b1ad5f",
     "resources": {
-      "apigusEast1MySimpleCalculatorcheckcalpost": {
-        "name": "apigusEast1MySimpleCalculatorcheckcalpost",
+      "apigusEast1indunilcalcheckcalpost": {
+        "name": "apigusEast1indunilcalcheckcalpost",
         "type": "API_GATEWAY",
         "config": {
           "selectedRegion": "us-east-1",
-          "apiMode": 1,
-          "apiName": "MySimpleCalculator",
-          "apiId": "872k6lu58d",
+          "apiMode": 0,
+          "apiName": "indunilcal",
           "endpointType": "EDGE",
-          "rootResourceId": "fpm371oqtg",
-          "existingResources": {
-            "/": "fpm371oqtg",
-            "/cal": "v8mhab",
-            "/calculate": "w4o4kt"
-          },
           "resourceMode": 0,
           "resourceName": "check/cal",
           "resourcePath": "/check/cal",
@@ -76,7 +69,7 @@
           "enableCORS": false,
           "stageMode": 0,
           "stageName": "test",
-          "mode": 1
+          "mode": 0
         }
       }
     },
@@ -105,7 +98,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1562140136825
+    "lastSave": 1562140604753
   },
   "VCS_STATE": {
     "provider": "GitHub",
