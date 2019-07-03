@@ -22,7 +22,7 @@
         "children": [],
         "isRemovable": true,
         "filePath": "indunilCalculator/lambda.js",
-        "code": "exports.handler = function(event, context, callback) {\n\n\n    \n    callback(null, {\"message\": \"Successfully executed\"+ Result});\n}",
+        "code": "//exports.handler = function(event, context, callback) {\n\n\n    let AWS = require('aws-sdk');\nexports.handler = function(event, context, callback) {\n\tconsole.log(\"Received request with payload\", event);\n\tlet operation = event.Operation;\n\tlet result = null;\n\tswitch(operation) {\n\t\tcase \"Add\":\n\t\t\tresult = event.LeftParameter + event.RightParameter;\n\t\t\tbreak;\n\t\tcase \"Subtract\":\n\t\t\tresult = event.LeftParameter - event.RightParameter;\n\t\t\tbreak;\n\t\tcase \"Multiply\":\n\t\t\tresult = event.LeftParameter + event.RightParameter;\n\t\t\tbreak;\n\t\tcase \"Devide\":\n\t\t\tresult = event.LeftParameter / event.RightParameter;\n\t\t\tbreak;\n\t\tcase \"Mod\":\n\t\t\tresult = event.LeftParameter % event.RightParameter;\n\t\t\tbreak;\n\t\tdefault:\n\t\t\tresult = \"Operation Not Permitted\";\n\t\t\tbreak;\n\t}\n\tevent.Result = result;\n\tcallback(null, event);\n\n\n    \n    //callback(null, {\"message\": \"Successfully executed\"+ Result});\n}",
         "config": {
           "runtime": "nodejs8.10",
           "handler": "handler",
@@ -37,11 +37,11 @@
           }
         ],
         "testCases": {
-          "8e56a5ff-ff73-4cbc-a7ad-6372e26ca5a8": {
-            "id": "8e56a5ff-ff73-4cbc-a7ad-6372e26ca5a8",
+          "62af2ba4-6ac9-4e1b-8925-b7d20d67f3e9": {
+            "id": "62af2ba4-6ac9-4e1b-8925-b7d20d67f3e9",
             "name": "Unnamed event",
             "functionId": "a89166fd-3afd-4721-b216-bda8a1b1ad5f",
-            "event": "{\n  \n\"Operation\": \"Add\",\n  \n\"LeftParameter\": 123,\n  \n\"RightParameter\": 394,\n\n\"Result\" : null \n// \"LeftParameter\" + \"RightParameter\"\n\n}"
+            "event": "{\n    \"key1\": \"value1\",\n    \"key2\": \"value2\",\n    \"key3\": \"value3\"\n}"
           }
         }
       }
@@ -105,7 +105,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1562139675869
+    "lastSave": 1562140136825
   },
   "VCS_STATE": {
     "provider": "GitHub",
