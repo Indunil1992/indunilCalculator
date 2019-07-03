@@ -1,5 +1,8 @@
-exports.handler = function(event, context, callback) {
+// exports.handler = function(event, context, callback) {
     let AWS = require('aws-sdk');
+
+
+
 exports.handler = function(event, context, callback) {
 	console.log("Received request with payload", event);
 	let operation = event.Operation;
@@ -30,4 +33,4 @@ exports.handler = function(event, context, callback) {
 
 
    // callback(null, {"message": "Successfully executed"});
-}
+// }
