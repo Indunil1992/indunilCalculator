@@ -41,7 +41,7 @@
             "id": "8e56a5ff-ff73-4cbc-a7ad-6372e26ca5a8",
             "name": "Unnamed event",
             "functionId": "a89166fd-3afd-4721-b216-bda8a1b1ad5f",
-            "event": "{\n  \n\"Operation\": \"Add\",\n  \n\"LeftParameter\": 123,\n  \n\"RightParameter\": 394\n\n\n}"
+            "event": "{\n  \n\"Operation\": \"Add\",\n  \n\"LeftParameter\": 123,\n  \n\"RightParameter\": 394,\n\n\"Result\" : null \n// \"LeftParameter\" + \"RightParameter\"\n\n}"
           }
         }
       }
@@ -105,7 +105,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1562139174096
+    "lastSave": 1562139675869
   },
   "VCS_STATE": {
     "provider": "GitHub",
