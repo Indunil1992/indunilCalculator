@@ -32,10 +32,18 @@
         },
         "triggers": [
           {
-            "resourceName": "apigusEast1MySimpleCalculatorcalculateget",
+            "resourceName": "apigusEast1MySimpleCalculatorcheckcalpost",
             "config": {}
           }
-        ]
+        ],
+        "testCases": {
+          "8e56a5ff-ff73-4cbc-a7ad-6372e26ca5a8": {
+            "id": "8e56a5ff-ff73-4cbc-a7ad-6372e26ca5a8",
+            "name": "Unnamed event",
+            "functionId": "a89166fd-3afd-4721-b216-bda8a1b1ad5f",
+            "event": "{\n    \"key1\": \"value1\",\n    \"key2\": \"value2\",\n    \"key3\": \"value3\"\n}"
+          }
+        }
       }
     },
     "deletedFiles": [],
@@ -45,8 +53,8 @@
     ],
     "currentFileId": "a89166fd-3afd-4721-b216-bda8a1b1ad5f",
     "resources": {
-      "apigusEast1MySimpleCalculatorcalculateget": {
-        "name": "apigusEast1MySimpleCalculatorcalculateget",
+      "apigusEast1MySimpleCalculatorcheckcalpost": {
+        "name": "apigusEast1MySimpleCalculatorcheckcalpost",
         "type": "API_GATEWAY",
         "config": {
           "selectedRegion": "us-east-1",
@@ -57,18 +65,17 @@
           "rootResourceId": "fpm371oqtg",
           "existingResources": {
             "/": "fpm371oqtg",
+            "/cal": "v8mhab",
             "/calculate": "w4o4kt"
           },
-          "resourceMode": 1,
-          "resourcePath": "/calculate",
-          "resourceName": "calculate",
-          "resourceId": "w4o4kt",
-          "restMethod": "GET",
+          "resourceMode": 0,
+          "resourceName": "check/cal",
+          "resourcePath": "/check/cal",
+          "restMethod": "POST",
           "proxyIntegration": false,
           "enableCORS": false,
-          "stageMode": 1,
-          "stageName": "Test",
-          "stageDeploymentId": "o70jpg",
+          "stageMode": 0,
+          "stageName": "test",
           "mode": 1
         }
       }
@@ -98,7 +105,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1562134217456
+    "lastSave": 1562137445865
   },
   "VCS_STATE": {
     "provider": "GitHub",
