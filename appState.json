@@ -22,7 +22,7 @@
         "children": [],
         "isRemovable": true,
         "filePath": "indunilCalculator/lambda.js",
-        "code": "//exports.handler = function(event, context, callback) {\n    let AWS = require('aws-sdk');\nexports.handler = function(event, context, callback) {\n\tconsole.log(\"Received request with payload\", event);\n\tlet operation = event.Operation;\n\tlet result = null;\n\tswitch(operation) {\n\t\tcase \"Add\":\n\t\t\tresult = event.LeftParameter + event.RightParameter;\n\t\t\tbreak;\n\t\tcase \"Subtract\":\n\t\t\tresult = event.LeftParameter - event.RightParameter;\n\t\t\tbreak;\n\t\tcase \"Multiply\":\n\t\t\tresult = event.LeftParameter + event.RightParameter;\n\t\t\tbreak;\n\t\tcase \"Devide\":\n\t\t\tresult = event.LeftParameter / event.RightParameter;\n\t\t\tbreak;\n\t\tcase \"Mod\":\n\t\t\tresult = event.LeftParameter % event.RightParameter;\n\t\t\tbreak;\n\t\tdefault:\n\t\t\tresult = \"Operation Not Permitted\";\n\t\t\tbreak;\n\t}\n\tevent.Result = result;\n\tcallback(null, event);\n}\n\n\n   // callback(null, {\"message\": \"Successfully executed\"});\n//}",
+        "code": "exports.handler = function(event, context, callback) {\n    let AWS = require('aws-sdk');\nexports.handler = function(event, context, callback) {\n\tconsole.log(\"Received request with payload\", event);\n\tlet operation = event.Operation;\n\tlet result = null;\n\tswitch(operation) {\n\t\tcase \"Add\":\n\t\t\tresult = event.LeftParameter + event.RightParameter;\n\t\t\tbreak;\n\t\tcase \"Subtract\":\n\t\t\tresult = event.LeftParameter - event.RightParameter;\n\t\t\tbreak;\n\t\tcase \"Multiply\":\n\t\t\tresult = event.LeftParameter + event.RightParameter;\n\t\t\tbreak;\n\t\tcase \"Devide\":\n\t\t\tresult = event.LeftParameter / event.RightParameter;\n\t\t\tbreak;\n\t\tcase \"Mod\":\n\t\t\tresult = event.LeftParameter % event.RightParameter;\n\t\t\tbreak;\n\t\tdefault:\n\t\t\tresult = \"Operation Not Permitted\";\n\t\t\tbreak;\n\t}\n\tevent.Result = result;\n\tcallback(null, event);\n}\n\n\n   // callback(null, {\"message\": \"Successfully executed\"});\n}",
         "config": {
           "runtime": "nodejs8.10",
           "handler": "handler",
@@ -98,7 +98,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1562140914052
+    "lastSave": 1562141244092
   },
   "VCS_STATE": {
     "provider": "GitHub",
