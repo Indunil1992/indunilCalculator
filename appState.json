@@ -60,7 +60,7 @@
         "filePath": "indunilCalculator/pythoncal.py",
         "cursor": {
           "lineNumber": 62,
-          "column": 11
+          "column": 1
         },
         "config": {
           "runtime": "python2.7",
@@ -164,7 +164,7 @@
     "platform": "AWS",
     "language": "javascript",
     "platformRegions": {},
-    "lastSave": 1580711211924
+    "lastSave": 1580711316247
   },
   "VCS_STATE": {
     "provider": "GitHub",
